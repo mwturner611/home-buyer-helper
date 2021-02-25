@@ -1,0 +1,15 @@
+$blue:    rgb(0, 106, 255);
+$headings-font-family: "Open Sans", Gotham, gotham, Tahoma, Geneva, sans-serif;
+
+.header {
+    color: $blue;
+    background-color: $blue;
+    font-family: $headings-font-family;
+}
+
+.test {
+    margin-top: 150px;
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

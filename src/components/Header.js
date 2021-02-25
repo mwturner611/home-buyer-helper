@@ -1,8 +1,13 @@
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+
 const Header = () => {
     return (
-        <header>
-            <h1>Home Buyer Helper</h1>
-        </header>
+        <Navbar fixed="top" expand="lg" className="header">
+            <Container>
+                <Navbar.Brand href="#">Home Buyer Helper</Navbar.Brand>
+            </Container>
+        </Navbar>
     )
 }
 
