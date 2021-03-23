@@ -1,13 +1,32 @@
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import {useState} from 'react';
 
-const Header = () => {
-    return (
-        <Navbar fixed="top" expand="lg" className="header">
-            <Container>
-                <Navbar.Brand href="#">Home Buyer Helper</Navbar.Brand>
-            </Container>
-        </Navbar>
+const Header = (props) => {
+
+  function handleClick(event) {
+    props.onClick(event.target.attributes[0].nodeValue)
+  }
+  
+  return (
+      
+  <Navbar className="header" expand="lg">
+
+    <Navbar.Brand value={'Landing'} onClick={handleClick} >HomeBuyer Helper</Navbar.Brand>
+
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+    <Navbar.Collapse id="basic-navbar-nav">
+
+        <Nav className="mr-auto">
+        <Nav.Link value={'Landing'} onClick={handleClick}>Home</Nav.Link>
+        <Nav.Link value={'SignIn'} onClick={handleClick}>Login</Nav.Link>
+        <Nav.Link value={'SignUp'} onClick={handleClick}>Sign Up</Nav.Link>
+        </Nav>
+
+    </Navbar.Collapse>
+
+  </Navbar>
     )
 }
 
