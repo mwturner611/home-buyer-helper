@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 const Header = (props) => {
 
-  function handleClick(event) {
+  const handleClick = (event) => {
     props.onClick(event.target.attributes[0].nodeValue)
   }
   
@@ -12,7 +12,7 @@ const Header = (props) => {
       
   <Navbar className="header" expand="lg">
 
-    <Navbar.Brand value={'Landing'} onClick={handleClick} >HomeBuyer Helper</Navbar.Brand>
+    <Navbar.Brand>HomeBuyer Helper</Navbar.Brand>
 
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
