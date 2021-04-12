@@ -19,6 +19,33 @@
     
     <div id="root"></div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDtXQAAjL4A5bJ-p1Sxxu9WXHOGI01e_f0",
+      authDomain: "homebuyer-helper-611.firebaseapp.com",
+      projectId: "homebuyer-helper-611",
+      messagingSenderId: "95220291747",
+      appId: "1:95220291747:web:ad8e022913928b6cf90716",
+      measurementId: "G-TWTMB8TT4X"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({timestampsInSnapshots: true});
+  </script>
+
     <!-- <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
 
 <script
